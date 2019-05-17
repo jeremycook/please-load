@@ -1,0 +1,27 @@
+{
+  "name": "please-load",
+  "version": "1.0.0",
+  "description": "The polite JS/CSS/HTML fragment/whatever loader for web browsers.",
+  "main": "src/please-load.js",
+  "scripts": {
+    "clean": "rimraf dist && mkdir dist",
+    "prebuild": "npm run clean && copyfiles ./LICENSE ./dist/",
+    "build": "./node_modules/.bin/uglifyjs ./src/please-load.js -o ./dist/please-load.min.js -c -m --source-map \"url='please-load.min.js.map'\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jeremycook/please-load.git"
+  },
+  "author": "Jeremy Cook",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jeremycook/please-load/issues"
+  },
+  "homepage": "https://github.com/jeremycook/please-load#readme",
+  "devDependencies": {
+    "copyfiles": "*",
+    "rimraf": "*",
+    "uglify-js": "*"
+  }
+}
