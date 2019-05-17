@@ -1,12 +1,15 @@
 {
   "name": "please-load",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "The polite JS/CSS/HTML fragment/whatever loader for web browsers.",
-  "main": "src/please-load.js",
+  "main": "dist/please-load.js",
+  "files": [
+    "dist/**"
+  ],
   "scripts": {
     "clean": "rimraf dist && mkdir dist",
-    "prebuild": "npm run clean && copyfiles ./LICENSE ./dist/",
-    "build": "./node_modules/.bin/uglifyjs ./src/please-load.js -o ./dist/please-load.min.js -c -m --source-map \"url='please-load.min.js.map'\"",
+    "prebuild": "npm run clean && copyfiles --flat ./src/please-load.js ./dist/",
+    "build": "./node_modules/.bin/uglifyjs ./dist/please-load.js -o ./dist/please-load.min.js -c -m --source-map \"url='please-load.min.js.map'\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
