@@ -4,9 +4,9 @@ Politely and asynchronously loads JS, CSS, HTML fragments, and other dependencie
 
 # Getting Started
 
-1. Add `please-load.js` to your HTML like in this simple example document.
+## 1. Add `please-load.js` to your HTML.
 
-> Note that `data-config` is required and `data-cache-buster` is recommended. The cache buster value is appended to URLs when loading files.
+Note that `data-config` is required and `data-cache-buster` is recommended. The cache buster value is appended to URLs when loading files.
 
 ```html
 <!DOCTYPE html>
@@ -29,9 +29,9 @@ Politely and asynchronously loads JS, CSS, HTML fragments, and other dependencie
 </html>
 ```
 
-2. Add a `please.json` file.
+## 2. Add a `please.json` file.
 
-> Note that all file paths are relative to the folder that the `please.json` file is in. This means you could put please.json in the root of your site and have file paths like `lib/jquery/jquery.min.js` or you could place it in your lib folder and have slightly shorter file paths like `jquery/jquery.min.js`. Paths containing  "../" are not resolved automatically. So it would make since to put please.json at the root of your website if you have dependencies in more than one folder under the root of your website (folders like /css and /js for example).
+Note that all file paths are relative to the folder that the `please.json` file is in. This means you could put please.json in the root of your site and have file paths like `lib/jquery/jquery.min.js` or you could place it in your lib folder and have slightly shorter file paths like `jquery/jquery.min.js`. Paths containing  "../" are not resolved automatically. So it would make since to put please.json at the root of your website if you have dependencies in more than one folder under the root of your website (folders like /css and /js for example).
 
 **Example /lib/please.json**
 
