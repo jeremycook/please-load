@@ -1,6 +1,6 @@
 {
   "name": "please-load",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Politely and asynchronously loads JS, CSS, HTML fragments, and other dependencies into web browsers.",
   "main": "dist/please-load.js",
   "files": [
